@@ -571,6 +571,7 @@ span.text-red {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 350px;
 }
 
 .success .icon {
@@ -588,7 +589,24 @@ span.text-red {
   font-size: 35px;
   color: #324d67;
 }
-
+@media screen and (max-width: 450px) {
+  .success,
+  .cancel {
+    width: 350px;
+    height: 400px;
+    margin-top: 80px;
+    padding: 20px;
+  }
+  .success h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .cancel p {
+    line-height: 25px;
+    text-align: center;
+    width: 100%;
+  }
+}
 .success .email-msg {
   font-size: 16px;
   font-weight: 00;
@@ -678,6 +696,11 @@ span.text-red {
     width: 350px;
     height: 350px;
   }
+  @media screen and (max-width: 450px) {
+    .product-detail-container .product-detail-image {
+      width: 330px;
+    }
+  }
   .cart-container {
     width: 415px;
     padding: 4px;
@@ -737,9 +760,6 @@ span.text-red {
 .success-wrapper,
 .cancel-wrapper {
   min-height: 69vh;
-}
-.success {
-  height: 350px;
 }
 
 .btn-container {
