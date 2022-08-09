@@ -326,9 +326,7 @@ span.text-red {
   font-weight: 600;
   font-size: 20px;
 }
-.cancel {
-  cursor: pointer;
-}
+
 .product-container {
   margin-top: 15px;
   overflow: auto;
@@ -578,6 +576,10 @@ span.text-red {
 .success .icon {
   color: green;
   font-size: 40px;
+}
+.cancel .icon {
+  color: orange;
+  font-size: 80px;
 }
 .success h2 {
   text-transform: capitalize;

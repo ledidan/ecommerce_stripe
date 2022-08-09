@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import "../styles/globals.css";
 import { Layout } from "../components";
 import { StateContext } from "../context/StateContext";
