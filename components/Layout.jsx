@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Topbar from "./Topbar";
 const Layout = ({ children }) => {
   return (
     <div className="layout">
@@ -14,6 +15,7 @@ const Layout = ({ children }) => {
         />
         <meta property="og:title" content="Welcome to Dan HeadPhone" key="title" />
       </Head>
+      <Topbar />
       <header>
         <Navbar />
       </header>

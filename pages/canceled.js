@@ -6,9 +6,11 @@ const Canceled = () => {
     <div className="cancel-wrapper">
       <div className="cancel">
         <p className="icon">
-          <RiEmotionSadLine />
+          <RiEmotionSadLine className="inline" />
         </p>
-        <p>Forgot to add something to your cart? Shop around then come back to pay!</p>
+        <p className="mt-5 leading-normal">
+          Forgot to add something to your cart? Shop around then come back to pay!
+        </p>
         <Link href="/">
           <button type="button" className="btn">
             Continue Shopping

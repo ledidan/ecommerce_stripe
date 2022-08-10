@@ -6,7 +6,7 @@ import { useStateContext } from "../../context/StateContext";
 import getStripe from "../../lib/getStripe";
 import toast from "react-hot-toast";
 const ProductDetails = ({ product, products }) => {
-  const { image, name, detail, price } = product;
+  const { image, name, details, price } = product;
   const [index, setIndex] = useState(0);
   const { incQty, decQty, qty, onAdd, cartItems, setShowCart } = useStateContext();
 
@@ -33,7 +33,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
         <div className="product-detail-desc">
-          <h1>{name}</h1>
+          <h1 className="text-3xl text-black font-bold">{name}</h1>
           <div className="reviews">
             <AiFillStar />
             <AiFillStar />
@@ -42,12 +42,12 @@ const ProductDetails = ({ product, products }) => {
             <AiOutlineStar />
           </div>
           <p>(20)</p>
-          <h4>Details: </h4>
-          <p>{detail}</p>
+          <h4 className="text-lg font-bold">Details: </h4>
+          <p>{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Quantity: </h3>
-            <p className="quantity-desc">
+            <p className="quantity-desc flex items-center">
               <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </span>

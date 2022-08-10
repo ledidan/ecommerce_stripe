@@ -10,12 +10,18 @@ const Navbar = () => {
     <div className="navbar-container">
       <p className="logo">
         <Link href="/">
-          <img src="/images/didanz-store.png" alt="logo" width={180} height={50} />
+          <img src="/images/didanz-store.png" alt="logo" className="w-44 h-12" />
         </Link>
       </p>
-      <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
-        <AiOutlineShopping />
-        <span className="cart-item-qty">{totalQuantities}</span>
+      <button
+        type="button"
+        className="cart-icon relative"
+        onClick={() => setShowCart(true)}
+      >
+        <AiOutlineShopping color="black" />
+        <span className="bg-red-500 text-white w-5 h-5 absolute -right-2 bottom-5 text-sm text-center font-semibold rounded-lg">
+          {totalQuantities}
+        </span>
       </button>
 
       {showCart && <Cart />}

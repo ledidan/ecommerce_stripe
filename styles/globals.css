@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 html,
 body,
 * {
@@ -29,7 +32,7 @@ a {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  margin: 6px 18px;
+  margin: 20px;
   position: relative;
 }
 .marquee-text {
@@ -347,25 +350,18 @@ span.text-red {
 .item-desc .flex {
   display: flex;
   justify-content: space-between;
-  width: 350px;
+  width: 300px;
   color: #324d67;
 }
 .item-desc .bottom {
   margin-top: 60px;
 }
-.flex h5 {
-  font-size: 24px;
-}
-.flex h4 {
-  font-size: 20px;
-}
+
 .total {
   display: flex;
   justify-content: space-between;
 }
-.total h3 {
-  font-size: 22px;
-}
+
 .remove-item {
   font-size: 24px;
   color: #f02d34;
@@ -416,7 +412,7 @@ span.text-red {
   border-radius: 15px;
   background-color: #ebebeb;
 
-  width: 400px;
+  max-width: 400px;
   height: 400px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -527,10 +523,10 @@ span.text-red {
   color: #f02d34;
 }
 .quantity-desc .num {
-  border-right: 1px solid gray;
   font-size: 20px;
 }
 .quantity-desc .plus {
+  border-left: 1px solid gray;
   color: rgb(49, 168, 49);
 }
 
@@ -602,7 +598,6 @@ span.text-red {
     text-align: center;
   }
   .cancel p {
-    line-height: 25px;
     text-align: center;
     width: 100%;
   }
@@ -738,21 +733,11 @@ span.text-red {
 .item-desc .bottom {
   margin-top: 30px;
 }
-.flex h5 {
-  font-size: 16px;
-  color: #324d67;
-}
-.flex h4 {
-  font-size: 16px;
-  color: black;
-}
+
 .cart-bottom {
   padding: 30px;
 }
 
-.total h3 {
-  font-size: 20px;
-}
 .track {
   animation: marquee 12s linear infinite;
   width: 300%;

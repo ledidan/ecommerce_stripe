@@ -52,7 +52,7 @@ const Cart = () => {
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
-            <AiOutlineShopping size={150} />
+            <AiOutlineShopping size={150} className="inline" />
             <h3>Your shopping bag is empty</h3>
             <Link href="/">
               <button type="button" className="btn" onClick={() => setShowCart(false)}>
@@ -68,21 +68,29 @@ const Cart = () => {
                 <img src={urlFor(item?.image[0])} className="cart-product-image" />
                 <div className="item-desc">
                   <div className="flex top">
-                    <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h5 className="text-2xl font-bold">{item.name}</h5>
+                    <h4 className="text-xl">${item.price}</h4>
                   </div>
                   <div className="flex bottom">
-                    <div>
-                      <p className="quantity-desc">
+                    <div
+                      className="flex border border-black w-40"
+                      style={{ width: "120px" }}
+                    >
+                      <p
+                        className="flex items-center"
+                        style={{ justifyContent: "space-evenly" }}
+                      >
                         <span
-                          className="minus"
+                          className="minus text-red-500 cursor-pointer"
                           onClick={() => toggleCartItemQuantity(item._id, "dec")}
                         >
                           <AiOutlineMinus />
                         </span>
-                        <span className="num">{item.quantity}</span>
+                        <span className="num p-2 border-black border-x">
+                          {item.quantity}
+                        </span>
                         <span
-                          className="plus"
+                          className="plus text-lime-500 cursor-pointer"
                           onClick={() => toggleCartItemQuantity(item._id, "inc")}
                         >
                           <AiOutlinePlus />
@@ -104,8 +112,8 @@ const Cart = () => {
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
-              <h3>Subtotal: </h3>
-              <h3>${totalPrices}</h3>
+              <h3 className="text-2xl font-bold">Subtotal: </h3>
+              <h3 className="text-2xl">${totalPrices}</h3>
             </div>
             <div className="btn-container">
               <button type="button" className="btn" onClick={handleCheckout}>
