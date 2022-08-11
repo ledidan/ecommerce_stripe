@@ -23,7 +23,6 @@ const Navbar = () => {
           {totalQuantities}
         </span>
       </button>
-
       {showCart && <Cart />}
     </div>
   );

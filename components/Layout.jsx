@@ -3,7 +3,9 @@ import Head from "next/head";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Topbar from "./Topbar";
+import useWindowSize from "../lib/useWindowSize";
 const Layout = ({ children }) => {
+  const size = useWindowSize();
   return (
     <div className="layout">
       <Head>
@@ -15,7 +17,7 @@ const Layout = ({ children }) => {
         />
         <meta property="og:title" content="Welcome to Dan HeadPhone" key="title" />
       </Head>
-      <Topbar />
+      {size.width > 450 && <Topbar />}
       <header>
         <Navbar />
       </header>

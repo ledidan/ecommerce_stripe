@@ -16,13 +16,13 @@ const Topbar = () => {
           </Link>
         </div>
         <div className="right social-media flex">
-          <Link href="">
+          <Link href="https://github.com/ledidan">
             <AiOutlineGithub className="cursor-pointer text-xl mr-4 hover:scale-125 duration-200 " />
           </Link>
-          <Link href="">
+          <Link href="https://www.facebook.com/ledidan">
             <AiOutlineFacebook className="cursor-pointer text-xl mr-4 hover:scale-125 duration-200" />
           </Link>
-          <Link href="">
+          <Link href="https://www.instagram.com/blackdouble.d/">
             <AiOutlineInstagram className="cursor-pointer text-xl mr-4 hover:scale-125 duration-200" />
           </Link>
         </div>
